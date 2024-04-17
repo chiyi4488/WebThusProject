@@ -31,7 +31,7 @@ li {
 
 @media screen and (max-width: 576px) {
   .home-carousel-item {
-    height: 100px !important;
+    height: 150px !important;
   }
 }
 
