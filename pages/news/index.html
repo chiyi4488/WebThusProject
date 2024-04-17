@@ -15,15 +15,12 @@ pagination:
         </tr>
     </thead>
     <tbody>
-        {% assign postsByYearMonth = paginator.posts | group_by_exp: "post", "post.date | date: '%Y年 %_m月'" %}
-        {% for yearMonth in postsByYearMonth %}
-        {% for post in yearMonth.items %}
-        <tr>
+        {% for post in paginator.posts %}
+        <tr class="tr_hover">
             <th style="font-weight: normal;">{{ post.categories }}</th>
             <td><a href="{{ post.url }}" alt="{{ post.title }}: {{ post.excerpt | strip_html }}" style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;text-decoration: none;">{{ post.title }}</a></td>
             <td>{{ post.date | date: "%Y-%m-%d" }}</td>
         </tr>
-        {% endfor %}
         {% endfor %}
     </tbody>
 </table>
@@ -35,10 +32,19 @@ pagination:
             <div class="text-center">
                 <div class="btn-group" role="group" aria-label="Basic example">
                     {% if paginator.previous_page %}
-                    <a class="btn btn-primary btn-lg" style="font-size:15px;" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">上一頁</a>
+                    <a class="btn btn-dark btn-lg" style="font-size:15px;" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">上一頁</a>
                     {% endif %}
+                    {% if paginator.page_trail %}
+                    {% for trail in paginator.page_trail %}
+                    <a class="btn btn-lg{% if page.url==trail.path %} btn-primary{% else %} btn-dark{% endif %}" style="font-size:15px;" 
+                        href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">
+                            {{ trail.num }}
+                    </a>
+                    {% endfor %}
+                    {% endif %}
+
                     {% if paginator.next_page %}
-                    <a class="btn btn-primary btn-lg" style="font-size:15px;" href="{{ paginator.next_page_path | prepend: site.baseurl }}">下一頁</a>
+                    <a class="btn btn-dark btn-lg" style="font-size:15px;" href="{{ paginator.next_page_path | prepend: site.baseurl }}">下一頁</a>
                     {% endif %}
                 </div>
             </div>
@@ -50,7 +56,7 @@ pagination:
 
 
 <style>
-    .table tr:hover {
+    .tr_hover:hover {
         --bs-table-bg: var(--bs-secondary-bg-subtle);
     }
 </style>
