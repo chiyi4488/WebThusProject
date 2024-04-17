@@ -19,6 +19,7 @@ h4,
 h5,
 h6 {
   line-height: 200%;
+  font-weight: bold;
 }
 
 .content p,
@@ -107,8 +108,9 @@ li {
 }
 
 .breadcrumb {
-  /*border: 1px solid #dfd7ca;*/
-}
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
 
 ol.breadcrumb>li.breadcrumb-item>a {
   text-decoration: none;
