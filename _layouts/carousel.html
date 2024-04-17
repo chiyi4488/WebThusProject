@@ -13,7 +13,7 @@ layout: posts
     <div class="carousel-inner">
         {% for gallery in page.galleryList %}
         <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <img src="{{ gallery.img }}" class="d-block w-100">
+            <img src="{{ gallery.img }}" class="d-block w-100" data-viewer="{{ gallery.img }}">
         </div>
         {% endfor %}
     </div>
@@ -28,6 +28,21 @@ layout: posts
         <span class="visually-hidden">下一張</span>
     </button>
 </div>
+
 <div style="margin-top: 30px;">
     {{ content }}
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Viewer(document.querySelector('.carousel-inner'), {
+            url: 'data-viewer'
+        });
+    });
+</script>
+
+<style>
+    .viewer-toolbar, .viewer-title{
+        display: none;
+    }
+</style>
