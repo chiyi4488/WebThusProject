@@ -12,6 +12,10 @@ body {
   min-height: 308.5px;
 }
 
+.tr_hover:hover {
+  --bs-table-bg: var(--bs-secondary-bg-subtle);
+}
+
 .content h1,
 h2,
 h3,
@@ -110,7 +114,8 @@ li {
 .breadcrumb {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
 ol.breadcrumb>li.breadcrumb-item>a {
   text-decoration: none;

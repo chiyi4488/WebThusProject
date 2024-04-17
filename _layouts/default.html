@@ -39,7 +39,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="/about/學會簡介">學會簡介</a>
                             <a class="dropdown-item" href="/about/組織章程">組織章程</a>
-                            <a class="dropdown-item" href="#">學會組織</a>
+                            <a class="dropdown-item" href="/about/學會組織">學會組織</a>
                             <a class="dropdown-item" href="/about/監理事會">理監事</a>
                             <a class="dropdown-item" href="/about/入會">申請入會</a>
                             <a class="dropdown-item" href="/about/會議記錄">會議記錄</a>
@@ -148,6 +148,9 @@
 
         const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
         const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
 </body>
 

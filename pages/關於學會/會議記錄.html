@@ -1,13 +1,40 @@
 ---
 layout: pages
-title:  "會議記錄"
+title: "會議記錄"
 permalink: /about/會議記錄
+data:
+ - title: 第十三屆第二次理監事聯席會議會議紀錄
+   date: 2013-10-17
+   url: https://www.csim.org.tw/sites/default/files/13-2-board_meeting_minutes2013-10-14.doc
+ - title: 第十二屆第十一次監事會議會議紀錄
+   date: 2013-10-17
+   url: https://www.csim.org.tw/sites/default/files/12th-11-meeting-minutes_0.pdf
+   detail: "第十二屆第十一次監事會議會議紀錄如附件PDF."
+ - title: 第十三屆第一次理監事聯席會議會議紀錄
+   date: 2013-10-17
+   url: https://www.csim.org.tw/sites/default/files/13th-1-meeting-minutess.pdf
+   detail: "第十三屆第一次理監事聯席會議會議紀錄如附件pDF."
+
 ---
-    <div class="col">
-        <h4 style="font-weight: bold;font-size: 26px;padding-left: 62px;padding-top: 10px;"><span style="font-style: normal !important;">會議記錄</span></h4><p style="margin-left: 20px;"><br /><a href="https://www.csim.org.tw/sites/default/files/13-2-board_meeting_minutes2013-10-14.doc"><span style="font-weight: normal !important; font-style: normal !important; color: rgb(46, 112, 177); background-color: transparent;">第十三屆第二次理監事聯席會議會議紀錄</span></a><em><span style="font-weight: normal !important; color: rgb(153, 153, 153); background-color: transparent;">2013-10-17</span></em>
-<br />
 
-<a href="https://www.csim.org.tw/sites/default/files/12th-11-meeting-minutes_0.pdf"><span style="font-weight: normal !important; font-style: normal !important; color: rgb(46, 112, 177); background-color: transparent;">第十二屆第十一次監事會議會議紀錄PDF</span></a><em><span style="font-weight: normal !important; color: rgb(153, 153, 153); background-color: transparent;">2013-08-08</span></em><br />
-
-<a href="https://www.csim.org.tw/sites/default/files/13th-1-meeting-minutess.pdf"><span style="font-weight: normal !important; font-style: normal !important; color: rgb(46, 112, 177); background-color: transparent;">第十三屆第一次理監事聯席會議會議紀錄PDF</span></a><em><span style="font-weight: normal !important; color: rgb(153, 153, 153); background-color: transparent;">2013-08-08</span></em><br />
-    </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>標題</th>
+            <th>日期</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in page.data%}
+        <tr class="tr_hover">
+            <td>{{ forloop.index }}</td>
+            <td {% if post.detail %} data-bs-toggle="tooltip" data-bs-title="{{ post.detail }}"{% endif %}>
+                <a href="{{ post.url }}" alt="{{ post.title }}" style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;  text-decoration: none;">{{ post.title }}
+                </a>
+            </td>
+            <td>{{ post.date | date: "%Y-%m-%d" }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
