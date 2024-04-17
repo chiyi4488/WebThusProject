@@ -35,23 +35,30 @@ li {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 577px) and (max-width: 768px) {
   .home-carousel-item {
     height: 160px !important;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .home-carousel-item {
     height: 220px !important;
   }
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (min-width: 993px) and (max-width: 1140px) {
   .home-carousel-item {
     height: 280px !important;
   }
 }
+
+@media screen and (min-width: 1141px) {
+  .home-carousel-item {
+    height: 320px !important;
+  }
+}
+
 
 .home-carousel-item {
   width: 100%;
