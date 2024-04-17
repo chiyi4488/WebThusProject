@@ -1,56 +1,59 @@
 <div style="background-color: white; margin-top: -20px; margin-bottom: 20px;">
-    <div class="block">
+    <div class="block sidebar">
         <h4 style="font-size: 20px; margin-top: 10px;"><strong>資訊管理學會</strong></h4>
-        {% for post in site.categories["資訊管理學會"] %}
-        <div><a href="{{ post.url }}"
+        {% for post in site.categories["資訊管理學會"] limit:3 %}
+        <div class="sidebarPost"><a href="{{ post.url }}"
                 style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
-                post.title }}</a>
+                post.title }}</a><span style="margin-left: 10px;" class="badge text-bg-secondary">{{ post.date | date: "%Y-%m-%d" }}</span>
             <!-- <p>{{ post.excerpt }}</p> -->
-            <h6 style="margin-top: 15px;">{{ post.date | date: "%Y-%m-%d" }}</h6>
-            <hr style="border: 1px dashed #000;">
         </div>
+        <hr style="border: 1px dashed #000;">
         {% endfor %}
-        <div style="text-align: right;">
+        <div style="text-align: right; margin-bottom: 15px;">
             <a class="btn btn-light btn-sm" href="/news/CSIM">查詢更多</a>
         </div>
     </div>
 </div>
 
-
 <div style="background-color: white;">
-    <div class="block">
+    <div class="block sidebar">
         <h4 style="font-size: 20px; margin-top: 10px;"><strong>學校</strong></h4>
-        {% for post in site.categories["學校"] %}
-        <div><a href="{{ post.url }}"
+        {% for post in site.categories["學校"] limit:3 %}
+        <div class="sidebarPost"><a href="{{ post.url }}"
                 style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
-                post.title }}</a>
+                post.title }}</a><span style="margin-left: 10px;" class="badge text-bg-secondary">{{ post.date | date: "%Y-%m-%d" }}</span>
             <!-- <p>{{ post.excerpt }}</p> -->
-            <h6 style="margin-top: 15px;">{{ post.date | date: "%Y-%m-%d" }}</h6>
-            <hr style="border: 1px dashed #000;">
         </div>
+        <hr style="border: 1px dashed #000;">
         {% endfor %}
-        <div style="text-align: right;">
-            <a class="btn btn-light btn-sm" href="/news/CSIM">查詢更多</a>
+        <div style="text-align: right; margin-bottom: 15px;">
+            <a class="btn btn-light btn-sm" href="/news/school">查詢更多</a>
         </div>
     </div>
 </div>
 
 <div style="background-color: white;">
-    <div class="block">
+    <div class="block sidebar">
         <h4 style="font-size: 20px; margin-top: 10px;"><strong>業界</strong></h4>
-        {% for post in site.categories["業界"] %}
-        <div><a href="{{ post.url }}"
+        {% for post in site.categories["業界"] limit:3 %}
+        <div class="sidebarPost"><a href="{{ post.url }}"
                 style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
-                post.title }}</a>
+                post.title }}</a><span style="margin-left: 10px;" class="badge text-bg-secondary">{{ post.date | date: "%Y-%m-%d" }}</span>
             <!-- <p>{{ post.excerpt }}</p> -->
-            <h6 style="margin-top: 15px;">{{ post.date | date: "%Y-%m-%d" }}</h6>
-            <hr style="border: 1px dashed #000;">
         </div>
+        <hr style="border: 1px dashed #000;">
         {% endfor %}
-        <div style="text-align: right;">
-            <a class="btn btn-light btn-sm" href="/news/CSIM">查詢更多</a>
-            <!--         <a class="btn btn-light btn-sm" href="/news/school">查詢更多</a>
- -->
+        <div style="text-align: right; margin-bottom: 15px;">
+            <a class="btn btn-light btn-sm" href="/news/taxonomy">查詢更多</a>
         </div>
     </div>
 </div>
+<style>
+    .sidebar a {
+        text-decoration: none;
+    }
+
+    .sidebarPost:hover {
+        background-color: var(--bs-secondary-bg-subtle);
+    }
+</style>
