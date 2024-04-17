@@ -83,6 +83,10 @@ pagination:
 
 permalink: /news/:categories/:year/:month/:day/:title
 
+categories_s:
+  - 資訊管理學會
+  - 學校
+  - 業界
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -5,15 +5,15 @@ permalink: /
 ---
 
 <div>
-
-    {% for post in site.posts limit:9 %}
-    <div class="postDIV">
-        <a href="{{ post.url }}"
-            style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
-            post.title }}</a>
-        <p>{{ post.excerpt | strip_html }}</p>
-        <h6 style="margin-top: -20px;"><span class="badge text-bg-secondary">{{ post.date | date: "%Y-%m-%d" }}</span></h6>
-    </div>
+    {% for post in site.posts limit:7 %}
+    <a href="{{ post.url }}">
+        <div class="postDIV">
+            <span style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;">{{ post.title }}</span>
+            <p>{{ post.excerpt | strip_html }}</p>
+            <h6 style="margin-top: -20px;"><span class="badge text-bg-secondary">{{ post.date | date: "%Y-%m-%d" }}</span></h6>
+        </div>
+    </a>
+    
     {% endfor %}
 </div>
 <div style="text-align: right; margin-top: 10px;">
@@ -33,6 +33,6 @@ permalink: /
         background-color: white;
         margin-top: 20px;
         margin-left: -20px;
-        padding: 15px 20px 3px 20px;
+        padding: 15px 20px 3px 20px;       
     }
 </style>
