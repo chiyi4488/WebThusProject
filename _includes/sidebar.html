@@ -1,7 +1,6 @@
 <div>
     <h4 style="font-size: 20px;"><strong>資訊管理學會</strong></h4>
-    {% assign postsByYearMonth = site.categories["資訊管理學會"] | group_by_exp: "post", "post.date | date: '%Y年
-    %_m月'" %}
+    {% assign postsByYearMonth = site.categories["資訊管理學會"] | group_by_exp: "post", "post.date | date: '%Y年 %_m月'" %}
     {% for yearMonth in postsByYearMonth %}
     {% for post in yearMonth.items %}
     <div><a href="{{ post.url }}"
@@ -21,8 +20,7 @@
 <div style="margin-top: 25px;">
     <h4 style="font-size: 25px;"><strong>學校</strong></h4>
     <div>
-        {% assign postsByYearMonth = site.categories["學校"] | group_by_exp: "post", "post.date | date: '%Y年
-        %_m月'" %}
+        {% assign postsByYearMonth = site.categories["學校"] | group_by_exp: "post", "post.date | date: '%Y年 %_m月'" %}
         {% assign sortedPosts = postsByYearMonth | sort: 'name' | reverse %}
         {% for yearMonth in sortedPosts limit:2 %}
         {% for post in yearMonth.items limit:2 %}
@@ -44,8 +42,7 @@
 <div style="margin-top: 25px;">
     <h4 style="font-size: 20px;"><strong>業界</strong></h4>
     <div>
-        {% assign postsByYearMonth = site.categories["業界"] | group_by_exp: "post", "post.date | date: '%Y年
-        %_m月'" %}
+        {% assign postsByYearMonth = site.categories["業界"] | group_by_exp: "post", "post.date | date: '%Y年 %_m月'" %}
         {% assign sortedPosts = postsByYearMonth | sort: 'name' | reverse %}
         {% for yearMonth in sortedPosts %}
         {% for post in yearMonth.items %}
