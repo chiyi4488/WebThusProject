@@ -11,7 +11,7 @@ permalink: /
     <div><a href="{{ post.url }}"
             style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
             post.title }}</a>
-        <p>{{ post.excerpt }}</p>
+        <p>{{ post.excerpt | strip_html }}</p>
         <h6>{{ post.date | date: "%Y-%-m-%-d" }}</h6>
         <hr style="border: 1px dashed #000;">
     </div>
