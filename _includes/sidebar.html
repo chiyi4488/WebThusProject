@@ -4,7 +4,7 @@
             <h4 style="font-size: 20px; margin-top: 10px;"><strong>{{ category_s }}</strong></h4>
             {% for post in site.categories[category_s] limit:3 %}
             <a href="{{ post.url }}">
-                <div class="sidebarPost">
+                <div class="sidebarPost" style="padding: 3px 5px 5px 5px;">
                     <span style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;">
                         {{ post.title }}
                     </span>
@@ -13,7 +13,7 @@
                     </span>
                 </div>
             </a>
-            <hr style="border: 1px dashed #000;">
+            <hr style="border: 1px dashed #919499;">
             {% endfor %}
             <div style="text-align: right; margin-bottom: 15px;">
                 {% if category_s == "資訊管理學會" %}
