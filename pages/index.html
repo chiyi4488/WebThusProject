@@ -5,19 +5,34 @@ permalink: /
 ---
 
 <div>
-    {% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y年 %_m月'" %}
-    {% for yearMonth in postsByYearMonth %}
-    {% for post in yearMonth.items %}
-    <div><a href="{{ post.url }}"
+
+    {% for post in site.posts limit:9 %}
+    <div class="postDIV">
+        <a href="{{ post.url }}"
             style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
             post.title }}</a>
         <p>{{ post.excerpt | strip_html }}</p>
-        <h6>{{ post.date | date: "%Y-%-m-%-d" }}</h6>
-        <hr style="border: 1px dashed #000;">
+        <h6 style="margin-top: -20px;"><span class="badge text-bg-secondary">{{ post.date | date: "%Y-%m-%d" }}</span></h6>
     </div>
     {% endfor %}
-    {% endfor %}
 </div>
-<div style="text-align: right;">
-    <a class="btn btn-light" href="/news">查詢更多</a>
+<div style="text-align: right; margin-top: 10px;">
+    <a class="btn btn-primary" href="/news">查詢更多</a>
 </div>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    .postDIV:hover {
+        background-color: var(--bs-secondary-bg-subtle);
+    }
+
+    .postDIV {
+        background-color: white;
+        margin-top: 20px;
+        margin-left: -20px;
+        padding: 15px 20px 3px 20px;
+    }
+</style>
