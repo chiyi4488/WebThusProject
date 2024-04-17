@@ -1,0 +1,39 @@
+---
+layout: pages
+title:  "研討會"
+permalink: /confernece
+---
+
+<table id="myTable" class="stripe" style="width: 100%;"></table>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+<script>
+    new DataTable('#myTable', {
+        data: [
+            {
+                "eventName": "<a href='https://www.csim.org.tw/conference/65'>第十九屆國際資訊管理學術研討會</a>",
+                "eventHost": "中華民國資訊管理學會, 暨南國際大學資管系",
+                "eventDate": "2008",
+                "paperURL": "<a href='https://www.csim.org.tw/papers?field_ref_conf_nid=65'>檢視</a>",
+            },
+            {
+                "eventName": "<a href='https://www.csim.org.tw/conference/53'>第十五屆國際資訊管理學術研討會</a>",
+                "eventHost": "中華民國資訊管理學會",
+                "eventDate": "2004",
+                "paperURL": "<a href='https://www.csim.org.tw/papers?field_ref_conf_nid=53'>檢視</a>",
+            },
+        ],
+            columns: [
+            { data: 'eventName', title: '研討會名稱' },
+            { data: 'eventHost', title: '主辦單位' },
+            { data: 'eventDate', title: '年份' },
+            { data: 'paperURL', title: '論文集'}
+        ],
+        columnDefs: [
+            {
+                targets: "_all",
+                className: 'dt-head-center'
+            }
+        ]
+    });
+</script>

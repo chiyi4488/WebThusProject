@@ -1,0 +1,23 @@
+---
+layout: home
+title: 首頁
+permalink: /
+---
+
+<div>
+    {% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y年 %_m月'" %}
+    {% for yearMonth in postsByYearMonth %}
+    {% for post in yearMonth.items %}
+    <div><a href="{{ post.url }}"
+            style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
+            post.title }}</a>
+        <p>{{ post.excerpt }}</p>
+        <h6>{{ post.date | date: "%Y-%-m-%-d" }}</h6>
+        <hr style="border: 1px dashed #000;">
+    </div>
+    {% endfor %}
+    {% endfor %}
+</div>
+<div style="text-align: right;">
+    <a class="btn btn-light" href="/news">查詢更多</a>
+</div>

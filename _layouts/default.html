@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{ page.title }}｜中華民國資訊管理學會</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;display=swap">
+    <link rel="stylesheet" href="/assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="/assets/css/Navbar-Centered-Brand-icons.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl sticky-top bg-secondary-subtle py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/assets/img/CSIM.gif" style="height: 46px;">
+                <span class="d-none d-sm-flex"
+                    style="font-family: 'Noto Sans TC', sans-serif;font-weight: bold;font-size: 21px;transform: translate(6px);margin: 4px;color: var(--bs-navbar-brand-color);">中華民國資訊管理學會</span></a><button
+                data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link " href="/">首頁</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false"
+                            data-bs-toggle="dropdown" href="#">關於學會</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/about/學會簡介">學會簡介</a>
+                            <a class="dropdown-item" href="/about/組織章程">組織章程</a>
+                            <a class="dropdown-item" href="#">學會組織</a>
+                            <a class="dropdown-item" href="/about/監理事會">理監事</a>
+                            <a class="dropdown-item" href="/about/入會">申請入會</a>
+                            <a class="dropdown-item" href="/about/會議記錄">會議記錄</a>
+                            <a class="dropdown-item" href="/about/檔案下載">資料下載</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link " href="/mis">各校資管系所</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false"
+                            data-bs-toggle="dropdown" href="#">研究與出版品</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="https://eclab.nkust.edu.tw/submitjim/"
+                                target="_blank">資訊管理學報</a>
+                            <a class="dropdown-item" href="/confernece">研究會論文集</a>
+                            <!-- <a class="dropdown-item" href="#">論文查詢</a> -->
+                        </div>
+                    </li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link " href="/galleries">活動花絮</a></li>
+                    <li class="nav-item"><a class="nav-link " href="/contact-us">聯絡我們</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#">ENGLISH</a></li>
+                </ul>
+                <div class="my-2"><button class="btn btn-light me-2" type="button" data-bs-toggle="popover"
+                        data-bs-title="註冊"
+                        data-bs-content="很抱歉，目前尚不開放訪客進行註冊。">註冊</button>
+                    <a class="btn btn-primary" role="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">登入</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div>
+        {{ content }}
+    </div>
+    <footer class="text-center bg-dark">
+        <div class="container text-white py-4 py-lg-5">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="mailto:csim.service@gmail.com"><svg
+                            xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em"
+                            fill="currentColor" class="text-light" style="font-size: 28px;">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+                            </path>
+                        </svg></a></li>
+            </ul>
+            <p class="mb-0"><span style="color: rgba(255, 255, 255, 0.75);">會址：251301
+                    新北市淡水區英專路151號（資管系辦公室）</span><br><span style="color: rgba(255, 255, 255, 0.75);">No.151, Yingzhuan
+                    Rd., Tamsui Dist., New Taipei City 251301, Taiwan (R.O.C.)</span><br><span
+                    style="color: rgba(255, 255, 255, 0.75);">中華民國資訊管理學會 版權所有 @2013 CSIM All Rights Reserved.</span></p>
+        </div>
+    </footer>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p style="text-align: center;">歡迎使用「中華民國資訊管理學會」，<br />請輸入使用者名稱與密碼以登入。</p>
+                    <div id="login-alert"></div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">使用者名稱</span>
+                        <input type="text" class="form-control" aria-label="請輸入使用者名稱">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">密　　　碼</span>
+                        <input type="password" class="form-control" aria-label="請輸入密碼">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-light">忘記密碼</button>
+                    <button type="button" class="btn btn-primary" id="login-button">登 入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script>
+        const alertPlaceholder = document.getElementById('login-alert')
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('login-button')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                appendAlert('使用者名稱或密碼錯誤', 'danger')
+            })
+        }
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+</body>
+
+</html>

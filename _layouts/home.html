@@ -1,0 +1,91 @@
+---
+layout: default
+---
+
+<div class="carousel slide" data-bs-ride="false" id="carousel-1" style="margin-bottom: 40px;">
+    <div class="carousel-inner">
+        <div class="carousel-item active home-carousel-item"><img class="w-100 d-block"
+                src="/assets/img/dian_zi_heng_fu_-1500x400dpi-3_0.jpg" alt="Slide Image"></div>
+        <div class="carousel-item"><img class="w-100 d-block" src="/assets/img/20230824b.png" alt="Slide Image">
+        </div>
+    </div>
+    <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a
+            class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span
+                class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+    <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0"
+            class="active"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button>
+    </div>
+</div>
+<div class="container">
+    <div class="row" style="margin-bottom: 25px;">
+        <div class="col-md-8">
+            <h2 style="padding-bottom: 7px;font-size: 25px;"><strong>最新消息</strong></h2>
+            {{ content }}
+        </div>
+        <div class="col-md-4">
+            <div>
+                <h4 style="font-size: 20px;"><strong>資訊管理學會</strong></h4>
+                {% assign postsByYearMonth = site.categories["資訊管理學會"] | group_by_exp: "post", "post.date | date: '%Y年
+                %_m月'" %}
+                {% for yearMonth in postsByYearMonth %}
+                {% for post in yearMonth.items %}
+                <div><a href="{{ post.url }}"
+                        style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
+                        post.title }}</a>
+                    <!-- <p>{{ post.excerpt }}</p> -->
+                    <h6 style="margin-top: 15px;">{{ post.date | date: "%Y-%-m-%-d" }}</h6>
+                    <hr style="border: 1px dashed #000;">
+                </div>
+                {% endfor %}
+                {% endfor %}
+                <div style="text-align: right;">
+                    <a class="btn btn-light btn-sm" href="/news/CSIM">查詢更多</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <h4 style="font-size: 25px;"><strong>學校</strong></h4>
+                <div>
+                    {% assign postsByYearMonth = site.categories["學校"] | group_by_exp: "post", "post.date | date: '%Y年
+                    %_m月'" %}
+                    {% assign sortedPosts = postsByYearMonth | sort: 'name' | reverse %}
+                    {% for yearMonth in sortedPosts limit:2 %}
+                    {% for post in yearMonth.items limit:2 %}
+                    <div><a href="{{ post.url }}"
+                            style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
+                            post.title }}</a>
+                        <!-- <p>{{ post.excerpt }}</p> -->
+                        <h6 style="margin-top: 15px;">{{ post.date | date: "%Y-%-m-%-d" }}</h6>
+                        <hr style="border: 1px dashed #000;">
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+                <div style="text-align: right;">
+                    <a class="btn btn-light btn-sm" href="/news/School">查詢更多</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <h4 style="font-size: 20px;"><strong>業界</strong></h4>
+                <div>
+                    {% assign postsByYearMonth = site.categories["業界"] | group_by_exp: "post", "post.date | date: '%Y年
+                    %_m月'" %}
+                    {% assign sortedPosts = postsByYearMonth | sort: 'name' | reverse %}
+                    {% for yearMonth in sortedPosts %}
+                    {% for post in yearMonth.items %}
+                    <div><a href="{{ post.url }}"
+                            style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;/*white-space: nowrap;*/">{{
+                            post.title }}</a>
+                        <!-- <p>{{ post.excerpt }}</p> -->
+                        <h6 style="margin-top: 15px;">{{ post.date | date: "%Y-%-m-%-d" }}</h6>
+                        <hr style="border: 1px dashed #000;">
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

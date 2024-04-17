@@ -1,0 +1,66 @@
+---
+layout: pages
+title: "活動花絮"
+permalink: /galleries
+galleryList:
+ - title: 第22屆海峽兩岸資訊管理發展與策略學術研討會
+   date: 2016-07-29
+   img: "/assets/img/thumbnail/dscn0006_diao_zheng_da_xiao_.jpg"
+   url: "/gallery/8110"
+ - title: 第二十七屆國際資訊管理學術研討會 (ICIM 2016)，靜宜大學
+   date: 2016-05-21
+   img: "/assets/img/thumbnail/img_1165.jpg"
+   url: "/gallery/8108"
+ - title: 2016資管學會理監事會議及會員代表大會
+   date: 2016-05-21
+   img: "/assets/img/thumbnail/img_1170.jpg"
+   url: "/gallery/8109"
+ - title: 大專院校資訊管理系所主管聯席會議 (北區)
+   date: 2016-04-14
+   img: "/assets/img/thumbnail/20160318_140511.jpg"
+   url: "/gallery/8106"
+ - title: 第21屆國際資訊管理暨實務研討會 (IMP 2015)，國立勤益科技大學
+   date: 2015-11-27
+   img: "/assets/img/thumbnail/2015-11-27_16.29.17.jpg"
+   url: "/gallery/152"
+ - title: 金融研訓院雲端研討會
+   date: 2013-01-10
+   img: "/assets/img/thumbnail/cimg2254.jpg"
+   url: "/gallery/101"
+ - title: 2013資管學會理監事會
+   date: 2013-01-07
+   img: "/assets/img/thumbnail/20060613000952-csim2006052101.jpg"
+   url: "/gallery/25"
+ - title: 2006年「第十一屆全國大專院校資訊管理實務專題暨資訊服務創新競賽」
+   date: 2006-12-16
+   img: "/assets/img/thumbnail/20070103125246-a24.jpeg"
+   url: "/gallery/13"
+ - title: 521第一屆全國大學院校資管博碩士論文競賽暨媒合會
+   date: 2006-05-21
+   img: "/assets/img/thumbnail/changephoto20060613000952-csim2006052107.jpeg"
+   url: "/gallery/14"
+---
+
+<div class="row">
+    {% for gallery in page.galleryList %}
+    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 20px;">
+        <a href="{{ gallery.url }}" style="text-decoration: none;">
+            <div class="card justify-content-center" style="max-width: 50rem;">
+                <img src="{{ gallery.img }}" class="card-img-top" alt="{{ gallery.title }}縮圖">
+                <div class="card-header">
+                    {{ gallery.date }}
+                </div>
+                <div class="card-body" style="height: 150px;">
+                    <h5 class="card-title">{{ gallery.title }}</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+    .card-body:hover{
+        background-color:var(--bs-secondary-bg-subtle);
+    }
+</style>

@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<section style="margin-bottom: 40px;">
+    <div data-bss-parallax-bg="true"
+        style="height: 300px;background-image: url(/assets/img/photo-1542903660-eedba2cda473.jpg);background-position: center;background-size: cover;">
+        <div class="container h-100">
+            <div class="row h-100" style="border-color: transparent;">
+                <div
+                    class="col-md-9 text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center">
+                    <div class="text-start">
+                        <div class="d-none d-lg-block">
+                            <ol class="breadcrumb"
+                                style="background: #ffffff00;color: #ffffff80;border-color: #ff000000;margin-bottom: 20px;">
+                                <li class="breadcrumb-item text-truncate"><a href="/"><span>首頁</span></a></li>
+                                {% if page.url == '/confernece' or page.url == '/papers' %}
+                                    <li class="breadcrumb-item"><a href="#"><span>研究及出版品</span></a></li>
+                                {% endif %}
+                                {% if page.url contains '/news' and page.url != '/news' %}
+                                    <li class="breadcrumb-item"><a href="/news"><span>最新消息</span></a></li>
+                                {% endif %}
+                                {% if page.url contains '/about' and page.url != '/about' %}
+                                    <li class="breadcrumb-item"><a href="#"><span>關於學會</span></a></li>
+                                {% endif %}
+                                {% if page.url contains '/gallery' %}
+                                    <li class="breadcrumb-item"><a href="/galleries"><span>活動花絮</span></a></li>
+                                {% endif %}
+                                <li class="breadcrumb-item"><a href="{{ page.permalink }}"><span style="text-overflow: ellipsis;">{{
+                                            page.title }}</span></a>
+                                </li>
+                            </ol>
+                        </div>
+                        <h1 class="text-uppercase fw-bold"
+                            style="margin-bottom: 25px;color: var(--bs-secondary-border-subtle);text-shadow: 0px 0px 3px var(--bs-primary-border-subtle);">
+                            {{ page.title }}</h1>
+                        {% if page.subtitle %}
+                            <p style="color: var(--bs-secondary-border-subtle);">{{ page.subtitle }}</p>
+                        {% endif %}
+                        {% if page.categories %}
+                            <p style="color: var(--bs-secondary-border-subtle);"><i class="fa fa-user-circle"></i>&nbsp;
+                                {{ page.author | default: "csim" }}&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 發表於&nbsp;{{ page.date | date: "%Y-%m-%d %H:%M" }}&nbsp;<br>
+                                <i class="fa fa-tag"></i>&nbsp; {{ page.categories }}</p>
+                        {% endif %}
+                        
+                        {% if page.layout == "carousel" %}
+                            <p style="color: var(--bs-secondary-border-subtle);">活動日期：<i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{ page.date | date: "%Y-%m-%d" }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row" style="margin-bottom: 25px;">
+        <div class="col-md-12 content" style="text-align: justify;">
+            {{ content }}
+        </div>
+    </div>
+</div>
