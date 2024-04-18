@@ -31,7 +31,7 @@ pagination:
   enabled: true       # Site-wide kill switch, disabled here it doesn't run at all
   debug: true         # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
   collection: "posts" # The default document collection to paginate if nothing is specified ('posts' is default)
-  per_page: 5         # How many objects per paginated page, used to be `paginate` (default: 0, means all)
+  per_page: 15         # How many objects per paginated page, used to be `paginate` (default: 0, means all)
 
   # The permalink structure for the paginated pages (this can be any level deep)
   permalink: "/:num/" # Pages are index.html inside this folder (default)
