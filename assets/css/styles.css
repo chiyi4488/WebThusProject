@@ -30,6 +30,24 @@ body {
   font-weight: bold;
 }
 
+.home-post-list a {
+  text-decoration: none;
+}
+
+.home-post-list span {
+  color: var(--bs-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home-post-list p {
+  font-size: 16px!important;
+}
+
+.home-post-list h6 {
+  margin-top: -10px;
+}
+
 .postDIV:hover {
   background-color: var(--bs-secondary-bg-subtle);
 }

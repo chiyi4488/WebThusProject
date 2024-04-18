@@ -3,24 +3,3 @@ layout: home
 title: 首頁
 permalink: /
 ---
-
-<div>
-    {% for post in site.posts limit:7 %}
-    <a href="{{ post.url }}">
-        <div class="postDIV">
-            <span style="color: var(--bs-primary);overflow: hidden;text-overflow: ellipsis;">{{ post.title }}</span>
-            <p>{{ post.excerpt | strip_html }}</p>
-            <h6 style="margin-top: -20px;"><span class="badge text-bg-secondary">{{ post.date | date: "%Y-%m-%d" }}</span></h6>
-        </div>
-    </a>
-    {% endfor %}
-</div>
-<div style="text-align: right; margin-top: 10px;">
-    <a class="btn btn-primary" href="/news">查詢更多</a>
-</div>
-
-<style>
-    a {
-        text-decoration: none;
-    }
-</style>

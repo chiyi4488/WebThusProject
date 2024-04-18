@@ -6,7 +6,8 @@ layout: default
     <div class="carousel-inner">
         <div class="carousel-item active home-carousel-item"><img class="w-100 d-block"
                 src="/assets/img/dian_zi_heng_fu_-1500x400dpi-3_0.jpg" alt="Slide Image"></div>
-        <div class="carousel-item home-carousel-item"><img class="w-100 d-block" src="/assets/img/20230824b.png" alt="Slide Image">
+        <div class="carousel-item home-carousel-item"><img class="w-100 d-block" src="/assets/img/20230824b.png"
+                alt="Slide Image">
         </div>
     </div>
     <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span
@@ -20,10 +21,28 @@ layout: default
 <div class="container">
     <div class="row" style="margin-bottom: 25px;">
         <div class="col-md-12 col-lg-8 content" style="margin-bottom: 30px;">
-            <div style="background-color: white;border-radius: 0px; padding-left: 25px; border-left: 7px solid #0b2041;">
+            <div
+                style="background-color: white;border-radius: 0px; padding-left: 25px; border-left: 7px solid #0b2041;">
                 <h2 style="font-size: 25px; height: 70px; line-height: 68px;"><strong>最新消息</strong></h2>
             </div>
+            {% for post in site.posts limit:7 %}
+            <div class="home-post-list">
+                <a href="{{ post.url }}">
+                    <div class="postDIV">
+                        <span>{{ post.title }}</span>
+                        <p>{{ post.excerpt | strip_html }}</p>
+                        <h6><span class="badge text-bg-secondary">{{ post.date | date: "%Y-%m-%d" }}</span></h6>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+            <div style="text-align: right; margin-top: 10px;">
+                <a class="btn btn-primary" href="/news">查詢更多</a>
+            </div>
+
             {{ content }}
+
         </div>
         <div class="col-md-12 col-lg-4">
             {% include sidebar.html %}
