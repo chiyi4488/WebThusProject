@@ -21,6 +21,10 @@ body {
   padding: 5px 0px 5px 5px;
 }
 
+.tag-href:hover {
+  font-weight: bold;
+}
+
 blockquote {
   border-left: 4px solid #0b2041;
   padding-left: 12px;

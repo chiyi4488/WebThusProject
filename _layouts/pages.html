@@ -32,25 +32,32 @@ layout: default
                                 </li>
                             </ol>
                         </div>
-                        <h1 class="text-uppercase fw-bold"
-                            style="margin-bottom: 25px;color: var(--bs-secondary-border-subtle);text-shadow: 0px 0px 3px var(--bs-primary-border-subtle);">
-                            {{ page.title }}</h1>
-                        {% if page.subtitle %}
-                        <p style="color: var(--bs-secondary-border-subtle);">{{ page.subtitle }}</p>
-                        {% endif %}
-                        {% if page.categories %}
-                        <p style="color: var(--bs-secondary-border-subtle);"><i class="fa fa-user-circle"></i>&nbsp;
-                            {{ page.author | default: "csim" }}&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 發表於&nbsp;{{
-                            page.date | date: "%Y-%m-%d %H:%M" }}&nbsp;<br>
-                            <i class="fa fa-tag"></i>&nbsp;
-                            {{ page.categories }}
-                        </p>
-                        {% endif %}
+                        <div style="color: var(--bs-secondary-border-subtle);">
+                            <h1 class="text-uppercase fw-bold"
+                                style="margin-bottom: 25px;color: var(--bs-secondary-border-subtle);text-shadow: 0px 0px 3px var(--bs-primary-border-subtle);">
+                                {{ page.title }}</h1>
+                            {% if page.subtitle %}
+                            <p>{{ page.subtitle }}</p>
+                            {% endif %}
+                            {% if page.categories %}
+                            <p><i class="fa fa-user-circle"></i>&nbsp;
+                                {{ page.author | default: "csim" }}&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 發表於&nbsp;{{
+                                page.date | date: "%Y-%m-%d %H:%M" }}&nbsp;<br>
+                                <i class="fa fa-tag"></i>&nbsp;
+                                {% for category in site.categories_subtitle %}
+                                {% if page.categories contains category.title %}
+                                <a class="tag-href" style="color: var(--bs-secondary-border-subtle); text-decoration: none;" href="{{ category.url }}">{{ category.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </p>
+                            {% endif %}
 
-                        {% if page.layout == "carousel" %}
-                        <p style="color: var(--bs-secondary-border-subtle);">活動日期：<i
-                                class="fa fa-clock-o"></i>&nbsp;&nbsp;{{ page.date | date: "%Y-%m-%d" }}</p>
-                        {% endif %}
+                            {% if page.layout == "carousel" %}
+                            <p>活動日期：<i
+                                    class="fa fa-clock-o"></i>&nbsp;&nbsp;{{ page.date | date: "%Y-%m-%d" }}</p>
+                            {% endif %}
+                        </div>
+
                     </div>
                 </div>
             </div>
