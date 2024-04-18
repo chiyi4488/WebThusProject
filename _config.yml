@@ -59,7 +59,7 @@ pagination:
 
 ############################################################
 
-permalink: /news/:categories/:year/:month/:day/:title
+permalink: /news/:categories/:title
 
 categories_s:
   - 資訊管理學會
