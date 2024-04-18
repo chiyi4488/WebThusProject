@@ -88,6 +88,14 @@ categories_s:
   - 學校
   - 業界
 
+categories_subtitle:
+  - title: "資訊管理學會"
+    url: /news/CSIM
+  - title: "學校"
+    url: /news/school
+  - title: "業界"
+    url: /news/taxonomy
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

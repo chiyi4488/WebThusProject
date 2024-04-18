@@ -9,11 +9,16 @@ body {
 .block {
   margin: 20px 20px 20px 20px;
   padding: 5px 5px 5px 5px;
-  min-height: 308.5px;
+  min-height: 332px;
 }
 
 .tr_hover:hover {
   --bs-table-bg: var(--bs-secondary-bg-subtle);
+}
+
+.block-before {
+  background-color: white;
+  padding: 5px 0px 5px 5px;
 }
 
 blockquote {
@@ -22,6 +27,7 @@ blockquote {
   color: rgba(var(--bs-secondary-bg));
   /* font-style: italic; */
 }
+
 .content h1,
 h2,
 h3,
@@ -65,13 +71,13 @@ li {
 
 @media screen and (min-width: 993px) and (max-width: 1140px) {
   .home-carousel-item {
-    height: 280px !important;
+    height: 300px !important;
   }
 }
 
 @media screen and (min-width: 1141px) {
   .home-carousel-item {
-    height: 320px !important;
+    height: 300px !important;
   }
 }
 
