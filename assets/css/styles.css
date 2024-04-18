@@ -16,7 +16,12 @@ body {
   --bs-table-bg: var(--bs-secondary-bg-subtle);
 }
 
-
+blockquote {
+  border-left: 4px solid #0b2041;
+  padding-left: 12px;
+  color: rgba(var(--bs-secondary-bg));
+  /* font-style: italic; */
+}
 .content h1,
 h2,
 h3,
