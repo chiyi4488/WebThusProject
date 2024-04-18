@@ -18,56 +18,34 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: 中華民國資訊管理學會 # 目前無用
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
 
 pagination:
-  # Site-wide kill switch, disabled here it doesn't run at all
-  enabled: true
-
-  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
-  debug: true
-
-  # The default document collection to paginate if nothing is specified ('posts' is default)
-  collection: "posts"
-
-  # How many objects per paginated page, used to be `paginate` (default: 0, means all)
-  per_page: 5
+  enabled: true       # Site-wide kill switch, disabled here it doesn't run at all
+  debug: true         # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
+  collection: "posts" # The default document collection to paginate if nothing is specified ('posts' is default)
+  per_page: 5         # How many objects per paginated page, used to be `paginate` (default: 0, means all)
 
   # The permalink structure for the paginated pages (this can be any level deep)
   permalink: "/:num/" # Pages are index.html inside this folder (default)
   #permalink: '/page/:num.html' # Pages are simple html files
   #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
 
-  # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
-  title: ":title (第 :num 頁)"
+  title: ":title (第 :num 頁)"  # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
+  limit: 0  # Limit how many pagenated pages to create (default: 0, means all)
 
-  # Limit how many pagenated pages to create (default: 0, means all)
-  limit: 0
-
-  # Optional, defines the field that the posts should be sorted on (omit to default to 'date')
-  sort_field: "date"
-
-  # Optional, sorts the posts in reverse order (omit to default decending or sort_reverse: true)
-  sort_reverse: true
-
-  # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
-  category: "posts"
-
-  # Optional, the default tag to use, omit to disable
-  tag: ""
+  
+  sort_field: "date"  # Optional, defines the field that the posts should be sorted on (omit to default to 'date')
+  sort_reverse: true  # Optional, sorts the posts in reverse order (omit to default decending or sort_reverse: true)
+  category: "posts"   # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
+  tag: ""             # Optional, the default tag to use, omit to disable
 
   # Optional, the default locale to use, omit to disable (depends on a field 'locale' to be specified in the posts,
   # in reality this can be any value, suggested are the Microsoft locale-codes (e.g. en_US, en_GB) or simply the ISO-639 language code )
