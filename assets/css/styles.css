@@ -16,9 +16,42 @@ body {
   --bs-table-bg: var(--bs-secondary-bg-subtle);
 }
 
+.viewer-toolbar,
+.viewer-title {
+  display: none;
+}
+
+.tr_hover:hover {
+  --bs-table-bg: var(--bs-secondary-bg-subtle);
+}
+
+.accordion-item button {
+  line-height: normal;
+  font-weight: bold;
+}
+
+.postDIV:hover {
+  background-color: var(--bs-secondary-bg-subtle);
+}
+
+.postDIV {
+  background-color: white;
+  margin-top: 20px;
+  /* margin-left: -20px; */
+  padding: 15px 20px 3px 20px;
+}
+
 .block-before {
   background-color: white;
   padding: 5px 0px 5px 5px;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+.sidebarPost:hover {
+  background-color: var(--bs-secondary-bg-subtle);
 }
 
 .tag-href:hover {
