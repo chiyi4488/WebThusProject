@@ -31,7 +31,7 @@ pagination:
             <div class="text-center">
                 <div class="btn-group" role="group" aria-label="Basic example">
                     {% if paginator.previous_page %}
-                    <a class="btn btn-primary btn-lg" style="font-size:15px;" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">上一頁</a>
+                    <a class="btn btn-primary btn-lg" style="font-size:12px;" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">上一頁</a>
                     {% endif %}
                     {% if paginator.page_trail %}
                     {% for trail in paginator.page_trail %}
@@ -42,7 +42,7 @@ pagination:
                     {% endfor %}
                     {% endif %}
                     {% if paginator.next_page %}
-                    <a class="btn btn-primary btn-lg" style="font-size:15px;" href="{{ paginator.next_page_path | prepend: site.baseurl }}">下一頁</a>
+                    <a class="btn btn-primary btn-lg" style="font-size:12px;" href="{{ paginator.next_page_path | prepend: site.baseurl }}">下一頁</a>
                     {% endif %}
                 </div>
             </div>
