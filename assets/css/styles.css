@@ -145,12 +145,12 @@ li {
   font-size: 18px;
 }
 
-.dropdown-menu {
+/* .dropdown-menu {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0;
-}
+} */
 
 @media screen and (max-width: 576px) {
   .home-carousel-item {
