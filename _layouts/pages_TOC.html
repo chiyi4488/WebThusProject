@@ -4,17 +4,23 @@ layout: pages
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 col-md-12 order-lg-1">
-            <div class="sticky-top TOC" style="top: 120px;">
+        <div class="col-lg-3 col-md-12">
+            <div class="sticky-top d-none d-lg-block" style="top: 120px;">
                 <h6>本文目錄</h6>
                 {% include toc.html html=content %}
             </div>
+            <div class="d-lg-none">
+                <h6>本文目錄</h6>
+                {% include toc.html html=content %}
+                <hr />
+            </div>
         </div>
-        <div class="col-lg-9 col-md-12 order-lg-2 content">
+        <div class="col-lg-9 col-md-12 content">
             {{ content }}
         </div>        
     </div>
 </div>
+
 
 <style>
     .TOC a {
