@@ -11,6 +11,7 @@
    - 文章以 Markdown 格式呈現，透過 Jekyll 轉碼成 HTML（絕大多數）
    - 需要重複使用的 HTML 內容，透過 Jekyll 以 For Loop 等形式呈現
  - 設計語言
+   - 支援 RWD
    - 以「區塊化」為設計語言去設計
    - 色彩一致性，以藍、灰色為主要基調
    - 從零開始設計網頁，無套用任何範本（Bootstrap Template）
