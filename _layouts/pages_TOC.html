@@ -5,12 +5,20 @@ layout: pages
 <div class="container">
     <div class="row">
         <div class="col-lg-3 col-md-12">
-            <div class="sticky-top d-none d-lg-block" style="top: 120px;">
-                <h6>本文目錄</h6>
+            <div class="sticky-top d-none d-lg-block TOC" style="top: 120px; text-align: left;">
+                {% if page.url == "/english" %}
+                    <h6>Contents</h6>
+                {% else %}
+                    <h6>本文目錄</h6>
+                {% endif %}
                 {% include toc.html html=content %}
             </div>
-            <div class="d-lg-none">
-                <h6>本文目錄</h6>
+            <div class="d-lg-none TOC" style="text-align: left;">
+                {% if page.url == "/english" %}
+                    <h6>Contents</h6>
+                {% else %}
+                    <h6>本文目錄</h6>
+                {% endif %}
                 {% include toc.html html=content %}
                 <hr />
             </div>
@@ -20,7 +28,6 @@ layout: pages
         </div>        
     </div>
 </div>
-
 
 <style>
     .TOC a {

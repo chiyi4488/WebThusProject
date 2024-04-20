@@ -22,6 +22,8 @@ title: 中華民國資訊管理學會 # 目前無用
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+markdown: kramdown
+
 # Build settings
 plugins:
   - jekyll-feed
