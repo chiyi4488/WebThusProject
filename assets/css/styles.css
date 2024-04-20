@@ -1,5 +1,5 @@
 :root {
-  scroll-padding-top: 90px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -11,12 +11,6 @@ body {
   color: black;
 
 }
-/* 
-.block h2:before {
-  content: "";
-  display: block;
-  height: 10px;
-} */
 
 .nav-link:focus,
 .nav-link:hover {
