@@ -12,6 +12,10 @@ body {
 
 }
 
+#top_href:hover{
+  font-weight: bold;
+}
+
 .nav-link:focus,
 .nav-link:hover {
   /* color: var(--bs-primary); */

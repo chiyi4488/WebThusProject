@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@400;700&display=swap"> 
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@400;700&display=swap">
     <link rel="stylesheet" href="/assets/css/bs-theme-overrides.css">
     <link rel="stylesheet" href="/assets/css/Navbar-Centered-Brand-icons.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
@@ -25,6 +26,7 @@
 </head>
 
 <body>
+    <span id="top"></span>
     <nav class="navbar navbar-expand-xl sticky-top bg-secondary-subtle py-3">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="/">
@@ -76,7 +78,12 @@
         {{ content }}
     </div>
     <footer class="text-center bg-dark">
-        <div class="container text-white py-4 py-lg-5">
+        <a href="#top" style="text-decoration: none;">
+            <div style="background-color: #2e322e;padding: 10px 0px 10px 0px;" id="top_href">
+                <span style="color: white;letter-spacing: 1em; margin-left: 1em;">TOP</span>
+            </div>
+        </a>
+        <div class="container text-white py-3 py-lg-4">
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="mailto:csim.service@gmail.com"><svg
                             xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em"
@@ -88,9 +95,11 @@
                         </svg></a></li>
             </ul>
             <p class="mb-0"><span style="color: rgba(255, 255, 255, 0.75);">會址：251301
-                    新北市淡水區英專路151號（資管系辦公室）</span><br><span style="color: rgba(255, 255, 255, 0.75);">No.151, Yingzhuan
+                    新北市淡水區英專路151號（資管系辦公室）</span><br><span style="color: rgba(255, 255, 255, 0.75);">No.151,
+                    Yingzhuan
                     Rd., Tamsui Dist., New Taipei City 251301, Taiwan (R.O.C.)</span><br><span
-                    style="color: rgba(255, 255, 255, 0.75);">中華民國資訊管理學會 版權所有 @2013 CSIM All Rights Reserved.</span></p>
+                    style="color: rgba(255, 255, 255, 0.75);">中華民國資訊管理學會 版權所有 @2013 CSIM All Rights Reserved.</span>
+            </p>
             <p class="mb-0"><span style="color: rgba(255, 255, 255, 0.75);">本網站非官網，僅為作業練習使用。</span></p>
         </div>
     </footer>
