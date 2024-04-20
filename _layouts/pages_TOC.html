@@ -4,20 +4,20 @@ layout: pages
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 col-md-12">
-            <div class="sticky-top d-none d-lg-block TOC" style="top: 120px; text-align: left;">
-                {% if page.url == "/english" %}
+        <div class="col-lg-3 col-md-12 py-12" style="z-index: 2;">
+                <div class="sticky-top d-none d-lg-block TOC" style="top: 120px; text-align: left;">
+                    {% if page.url == "/english" %}
                     <h6>Contents</h6>
-                {% else %}
+                    {% else %}
                     <h6>本文目錄</h6>
-                {% endif %}
-                {% include toc.html html=content %}
-            </div>
+                    {% endif %}
+                    {% include toc.html html=content %}
+                </div>
             <div class="d-lg-none TOC" style="text-align: left;">
                 {% if page.url == "/english" %}
-                    <h6>Contents</h6>
+                <h6>Contents</h6>
                 {% else %}
-                    <h6>本文目錄</h6>
+                <h6>本文目錄</h6>
                 {% endif %}
                 {% include toc.html html=content %}
                 <hr />
@@ -25,7 +25,7 @@ layout: pages
         </div>
         <div class="col-lg-9 col-md-12 content overflow">
             {{ content }}
-        </div>        
+        </div>
     </div>
 </div>
 
