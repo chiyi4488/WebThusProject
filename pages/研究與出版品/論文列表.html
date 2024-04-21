@@ -1,0 +1,112 @@
+---
+layout: pages
+title: "論文列表"
+permalink: /papers
+data:
+ - title: Web Service與定位技術的整合及應用
+   area: 通網技術
+   keywords: Context Awareness, Web Service, 位置資訊
+   authors: 盧春芳, 黃世禎, 傅上珍
+   date: 2004-04-11
+   url: https://www.csim.org.tw/sites/default/files/paper/20040011.pdf
+ - title: 無線區域網路之位置導向服務品質監測
+   area: 通網技術
+   keywords: 無線區域網路, 服務品質, 效能管理, SNMP
+   authors: 陳彥錚, 陳秋彰
+   date: 2004-04-10
+   url: https://www.csim.org.tw/sites/default/files/paper/20040010.pdf
+   detail: "相關論文如附件."
+ - title: 非集中式點對點環境下之快速與低頻寬需求的服務搜尋方法設計
+   area: 通網技術
+   keywords: 點對點, 網域名稱伺服器, 非集中式點對點網路, 服務搜尋
+   authors: 陳青文, 楊朝翔, 顏佩詩
+   date: 2004-04-09
+   url: https://www.csim.org.tw/sites/default/files/paper/20040009.pdf
+   detail: "相關論文如附件."
+ - title: 在多重通道隨意網路上利用控制與資料通道頻寬比例使效能最大化之策略
+   area: 通網技術
+   keywords: 無線隨意網路, 媒體存取層, 效能, 資料頻道, 控制頻道
+   authors: 陳青文, 方清宏, 賴俊良, 洪瑞聰
+   date: 2004-04-08
+   url: https://www.csim.org.tw/sites/default/files/paper/20040008.pdf
+   detail: "相關論文如附件."
+ - title: Misuse Detection of New Malicious Emails
+   area: 通網技術
+   keywords: email virus detection, self-organizing maps, network security
+   authors: Dong-Her Shih, Chun-Pin Chang, Hsiu-Sen Chiang
+   date: 2004-04-07
+   url: https://www.csim.org.tw/sites/default/files/paper/20040007.pdf
+   detail: "相關論文如附件."
+ - title: 協同過濾技術在商品推薦系統上之應用與成效評估
+   area: 通網技術
+   keywords: 電子商務, 消費者行為, 協同過濾, 推薦系統
+   authors: 吳肇銘, 金志聿, 林怡秀
+   date: 2004-04-06
+   url: https://www.csim.org.tw/sites/default/files/paper/20040006.pdf
+   detail: "相關論文如附件."
+ - title: 結合IC卡之校園安全網頁系統的設計與實現
+   area: 通網技術
+   keywords: IC卡, WWW, AES, RSA, PHP
+   authors: 陳軒正, 楊中皇
+   date: 2004-04-05
+   url: https://www.csim.org.tw/sites/default/files/paper/20040005.pdf
+   detail: "相關論文如附件."
+ - title: 以電力能源為基礎的蜂巢式階層管理
+   area: 通網技術
+   keywords: 隨意式無線網路, 無基礎建設的網路結構, 蜂巢式階層管理架構, 行動代理人, 行動設備
+   authors: 王淑卿, 嚴國慶 , 周雨韻
+   date: 2004-04-04
+   url: https://www.csim.org.tw/sites/default/files/paper/20040004.pdf
+   detail: "相關論文如附件."
+ - title: 行動商務應用之動態使用者查詢系統
+   area: 通網技術
+   keywords: 定址化服務, 動態查詢, 查詢系統, 行動服務
+   authors: 翁頌舜, 周羿禛
+   date: 2004-04-03
+   url: https://www.csim.org.tw/sites/default/files/paper/20040003.pdf
+   detail: "相關論文如附件."
+ - title: Resilient and Robust Key Management for Mobile Ad Hoc Networks
+   area: 通網技術
+   keywords: PKI, CA, Cluster
+   authors: Hua-Yi Lin, Yueh-Min Huang
+   date: 2004-04-02
+   url: https://www.csim.org.tw/sites/default/files/paper/20040002.pdf
+   detail: "相關論文如附件."
+ - title: 行動網路環境下付款機制之研究
+   area: 通網技術
+   keywords: 預付服務, 行動付款, 無線智慧網路
+   authors: 羅濟群, 黃俊龍
+   date: 2004-04-01
+   url: https://www.csim.org.tw/sites/default/files/paper/20040001.pdf
+   detail: "相關論文如附件."
+---
+
+<div class="overflow">
+  <table class="table" style="text-align: left;">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>論文名稱</th>
+        <th>應用領域</th>
+        <th>關鍵字</th>
+        <th>作者</th>
+        <th style="width: 100px;">日期 </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for paper in page.data %}
+      <tr class="tr_hover">
+        <td>{{ forloop.index }}</td>
+        <td {% if paper.detail %} data-bs-toggle="tooltip" data-bs-title="{{ paper.detail }}" {% endif %}>
+          <a href="{{ paper.url }}" style="color: var(--bs-primary);text-decoration: none;">{{ paper.title }}</a>
+        </td>
+        <td>{{ paper.area }}</td>
+        <td>{{ paper.keywords }}</td>
+        <td>{{ paper.authors }}</td>
+        <td>{{ paper.date | date: "%Y-%m-%d" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
